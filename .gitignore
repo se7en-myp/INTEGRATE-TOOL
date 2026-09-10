@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.next/
+.env*
+!.env.example
+.stackwire/
+.vercel/
+.cache/
+coverage/
+*.tgz
