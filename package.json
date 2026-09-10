@@ -1,0 +1,35 @@
+{
+  "name": "stackwire",
+  "version": "0.1.0",
+  "description": "Diagnose and repair the connections in your Next.js full-stack project.",
+  "type": "module",
+  "bin": { "stackwire": "dist/cli.js" },
+  "files": ["dist", "README.md", "LICENSE"],
+  "engines": { "node": ">=20.19.0" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:templates": "tsx scripts/validate-templates.ts",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run build"
+  },
+  "keywords": ["nextjs", "supabase", "vercel", "cli", "diagnostics", "shadcn"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/se7en-myp/INTEGRATE-TOOL.git" },
+  "dependencies": {
+    "@inquirer/prompts": "^7.8.0",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "diff": "^8.0.2",
+    "dotenv": "^16.6.1",
+    "ora": "^8.2.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.0",
+    "tsx": "^4.20.5",
+    "vitest": "^3.2.4"
+  }
+}
